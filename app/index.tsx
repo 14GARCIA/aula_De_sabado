@@ -1,0 +1,31 @@
+import CustomButton from "@/components/CustomButton";
+import React, { useState } from "react";
+import { Button, Text, TextInput, View } from "react-native";
+
+export default function HomeScreen(){
+    
+
+    const [count, setCount ]= useState(0);
+    const[name ,  setName]= useState("henrique")
+    return (
+        <View style = {{flex:1, justifyContent: "center", alignItems: "center"}}>
+            <Text>Bem vindo ao app, {name}</Text>
+            <Text>Contador: {count}</Text>
+            <Button title="Aumentar"
+            onPress={() => {setCount(count + 1)}}/>
+            <Button title="Diminuir"
+              onPress={() => {setCount(count - 1)}}/>
+
+              <Button title="reset"
+              onPress={() => {setCount(count - count)}}/>
+            
+              <TextInput
+              placeholder="digite seu nome"
+              onChangeText={setName}
+
+              />    
+              <CustomButton title="Botão vsf" onPress={()=>{setCount(count + 1)}}/>
+        </View>
+        
+    );
+}
