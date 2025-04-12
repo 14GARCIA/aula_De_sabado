@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         borderRadius: 5
     },
     text:{
-        color: "red",
+        color: "redj",
         textAlign: "center"
 
     },
